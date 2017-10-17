@@ -26,7 +26,5 @@ module.exports = {
     nameLabel: 'span[name=nameLabel]',
     phoneNumberLabel: 'span[name=phoneLabel]',
     titleLabel: 'span[name=titleLabel]'
-
-
   }
 }
