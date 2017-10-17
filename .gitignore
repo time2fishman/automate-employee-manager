@@ -5,6 +5,8 @@
 
 # testing
 /coverage
+nightwatchProps.js
+
 
 # production
 /build
