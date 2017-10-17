@@ -53,11 +53,11 @@ class EmployeeEditor extends Component {
             <button name='save' id="saveBtn" className="confirmationButton" disabled={this.state.notModified} onClick={ this.save }> Save </button>
             <button name='cancel' className="neutralButton" disabled={this.state.notModified} onClick={ this.cancel }> Cancel </button>
             <br />
-            <span className="placeholderText"> Name </span>
+            <span name="nameLabel" className="placeholderText"> Name </span>
             <input name='nameEntry' className="materialInput" value={ this.state.employee.name } onChange={ (e) => { this.handleChange('name', e.target.value) } }></input>
-            <span className="placeholderText"> Phone Number </span>
+            <span name="phoneLabel" className="placeholderText"> Phone Number </span>
             <input name='phoneEntry' className="materialInput" value={ this.state.employee.phone } onChange={ (e) => { this.handleChange('phone', e.target.value) } }></input>
-            <span className="placeholderText"> Title </span>
+            <span name="titleLabel" className="placeholderText"> Title </span>
             <input name='titleEntry' className="materialInput" value={ this.state.employee.title } onChange={ (e) => { this.handleChange('title', e.target.value) } }></input>
           </div>
           :
