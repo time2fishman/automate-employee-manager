@@ -5,8 +5,9 @@
 
 # testing
 /coverage
+selenium-debug.log
+/tests-output
 nightwatchProps.js
-
 
 # production
 /build
