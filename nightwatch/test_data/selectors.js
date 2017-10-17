@@ -1,5 +1,4 @@
 module.exports = {
-  //the 'key' for the fields should match the key of the fields' values in your test_data
   header: 'span[class=titleText]',
   employeeList: {
     employee1: 'li[name=employee1]',
