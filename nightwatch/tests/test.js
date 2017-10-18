@@ -15,6 +15,17 @@ module.exports = {
         browser
             .expect.element('body').to.be.present;
     },
+<<<<<<< HEAD
+=======
+    'Edit & Save Employee, Verify Persistence' : browser => {
+        functions.clickByName(data.employees.existingEmployeeData.employee1.name, browser)
+        functions.editFields(['nameField', 'phoneField', 'titleField'], [data.employees.editedEmployeeData.employee1.name,data.employees.editedEmployeeData.employee1.phoneNumber, data.employees.editedEmployeeData.employee1.title], browser)
+        browser
+        .click(selectors.infoCardItems.saveButton)
+        functions.clickByName(data.employees.existingEmployeeData.employee4.name, browser)
+        functions.clickByName(data.employees.existingEmployeeData.employee1.name, browser)
+        functions.editorCheck(data.employees.editedEmployeeData.employee1, browser)
+>>>>>>> c25155ec18d484af8a05169cba749beaf6617fcb
     'Check that Simulated Employee List Loads': browser => {
         let employeeNames = [
             data.employees.existingEmployeeData.employee1.name,
@@ -28,7 +39,14 @@ module.exports = {
             data.employees.existingEmployeeData.employee9.name,
             data.employees.existingEmployeeData.employee10.name
         ]
+<<<<<<< HEAD
         functions.listcheck(employeeNames)
+=======
+        functions.listCheck(employeeNames, browser)
+>>>>>>> c25155ec18d484af8a05169cba749beaf6617fcb
 
     }
+
+
+
 }
