@@ -1,25 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites errors="1"
             failures="0"
-            tests="2">
+            tests="1">
 
   <testsuite name="test"
     errors="1" failures="0" hostname="" id="" package="test" skipped="0"
-    tests="2" time="4.134" timestamp="Wed, 18 Oct 2017 15:30:07 GMT">
+    tests="1" time="4.367" timestamp="Wed, 18 Oct 2017 15:45:51 GMT">
   
-    <testcase name="test" classname="test" time="3.877" assertions="1">
+    <testcase name="cancel button does not save edited info" classname="test" time="4.367" assertions="1">
 
     
-    </testcase>
-  
-    <testcase name="cancel button does not save edited info" classname="test" time="0.2570" assertions="0">
     </testcase>
   
 
   
     <system-err>
-      ERROR: Unable to locate element: &quot;button[class=neutralButton]&quot; using: css selector
-    at Object.cancel button does not save edited info (C:\Users\Teri Johannah\Desktop\DevmountainProjects\automate-employee-manager\nightwatch\tests\test.js:21:17)
+      ERROR: Unable to locate element: &quot;button[name=cancel]&quot; using: css selector
+    at Object.cancel button does not save edited info (C:\Users\Teri Johannah\Desktop\DevmountainProjects\automate-employee-manager\nightwatch\tests\test.js:22:17)
     at Module.call (C:\Users\Teri Johannah\AppData\Roaming\npm\node_modules\nightwatch\lib\runner\module.js:62:34)
     at C:\Users\Teri Johannah\AppData\Roaming\npm\node_modules\nightwatch\lib\runner\testcase.js:70:29
     at _fulfilled (C:\Users\Teri Johannah\AppData\Roaming\npm\node_modules\nightwatch\node_modules\q\q.js:834:54)
