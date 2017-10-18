@@ -45,12 +45,6 @@ module.exports = {
         functions.editorCheck(data.employees.existingEmployeeData.employee4, browser)
     },
     'Edit & Save Employee, Verify Persistence': browser => {
-        functions.clickByName(data.employees.existingEmployeeData.employee1.name, browser)
-        functions.editFields(['nameField', 'phoneNumberField', 'titleField'], [data.employees.editedEmployeeData.employee1.name, data.employees.editedEmployeeData.employee1.phoneNumber, data.employees.editedEmployeeData.employee1.title], browser)
-        browser
-            .click(selectors.infoCardItems.saveButton)
-        functions.clickByName(data.employees.existingEmployeeData.employee4.name, browser)
-        functions.clickByName(data.employees.editedEmployeeData.employee1.name, browser)
-        functions.editorCheck(data.employees.editedEmployeeData.employee1, browser)
+        console.log('foobar')
     }
 }
