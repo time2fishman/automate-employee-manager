@@ -24,8 +24,10 @@ const clickByName = (employeeName, browser) => {
         if (object.hasOwnProperty(card)) {
             var element = object[card]
             browser.getText(element, result => {
-                if (result === employeeName)
+                if (result.value === employeeName){
                     browser.click(element)
+                        .waitForElementVisible(selectors.infoCardItems.saveButton, 1000)
+                }
             })
         }
     }
