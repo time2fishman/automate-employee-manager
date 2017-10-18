@@ -14,6 +14,8 @@ const clickByName = (employeeName, browser) => {
 const editorCheck = (employee, browser) => {
 // takes the passed in employee object and compares against what is in
 // the fields
+browser.expect.element(data.employees.existingEmployeeData.employee1).text.to.equal(selectors.employeeList.employee1)
+
 }
 
 const editFields = (fields, values, browser) => {
