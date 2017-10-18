@@ -1,6 +1,7 @@
 const selectors = require('./selectors')
 
 const listCheck = (employeeNames, browser) => {
+
   // checks a list of employeeNames against the names on the screen.
   // e.g. ['Ron Swanson', 'Todd Bergeron',...]
   // should check browser for each name in the right position
@@ -38,10 +39,10 @@ const editorCheck = (employee, browser) => {
 
 const editFields = (fields, values, browser) => {
   for (let i = 0; i < fields.length; i++) {
-    browser.clearValue(selectors[fields[i]])
-    browser.setValue('input[type=text]')
-
-    //.expect.element(selector).to.have.value.that.equals(value)
+    browser
+      .clearValue(selectors[fields[i]])
+      .setValue(selectors[fields[i]], value[i])
+      .expect.element(selectors[fields[i]]).text.to.equal(value[i])
   }
 }
 
