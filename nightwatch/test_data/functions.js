@@ -19,13 +19,16 @@ const listCheck = (employeeNames, browser) => {
 const clickByName = (employeeName, browser) => {
     // clicks the employee tag in the employee list for the name passed in
     // this will populate the editor
-    let object = selectors.employeeList
-    for (var card in object) {
-        if (object.hasOwnProperty(card)) {
-            var element = object[card]
-            browser.getText(element, result => {
-                if (result === employeeName)
-                    browser.click(element)
+    let employeeSelectors = selectors.employeeList
+    for (let employee in employeeSelectors) {
+        if (employeeSelectors.hasOwnProperty(employee)) {
+            let selector = employeeSelectors[employee]
+            browser.getText(selector, result => {
+                if (result.value === employeeName){
+                    browser
+                        .click(selector)
+                        .waitForElementVisible(selectors.infoCardItems.nameField, 1000)
+                }
             })
         }
     }
@@ -34,18 +37,17 @@ const clickByName = (employeeName, browser) => {
 const editorCheck = (employee, browser) => {
     // takes the passed in employee object and compares against what is in
     // the fields
-    browser.expect.element(selectors.infoCardList.nameField).text.to.equal(employee.name)
-    browser.expect.element(selectors.infoCardList.id).text.to.equal(employee.id)
-    browser.expect.element(selectors.infoCardList.phoneNumberField).text.to.equal(employee.phoneNumber)
-    browser.expect.element(selectors.infoCardList.titleLabel).text.to.equal(employee.title)
+    browser.expect.element(selectors.infoCardItems.nameField).value.to.equal(employee.name)
+    browser.expect.element(selectors.infoCardItems.phoneNumberField).value.to.equal(employee.phoneNumber)
+    browser.expect.element(selectors.infoCardItems.titleField).value.to.equal(employee.title)
 } 
 
 const editFields = (fields, values, browser) => {
     for(let i=0; i < fields.length; i++) {
         browser
-            .clearValue(selectors[fields[i]])
-            .setValue(selectors[fields[i]])
-            .expect.element(selectors[fields[i]]).text.to.equal(value[i])
+            .clearValue(selectors.infoCardItems[fields[i]])
+            .setValue(selectors.infoCardItems[fields[i]], values[i])
+            .expect.element(selectors.infoCardItems[fields[i]]).value.to.equal(values[i])
     }
     // edits the editor fields, based on fields named in the field array, and
     // inputs the values from the value array at the same index
