@@ -17,6 +17,11 @@ const editorCheck = (employee, browser) => {
 }
 
 const editFields = (fields, values, browser) => {
+  for(let i=0; i < fields.length; i++){
+    browser.clearValue(selectors[fields[i]])
+    browser.getSet(selector, value)
+    //.expect.element(selector).to.have.value.that.equals(value)
+  }
 // edits the editor fields, based on fields named in the field array, and
 // inputs the values from the value array at the same index
 // e.g. ['nameField', 'titleField'], ['Ron Swanson', 'Director of Parks and Rec.']
