@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="1"
+            tests="3">
+
+  <testsuite name="test"
+    errors="0" failures="1" hostname="" id="" package="test" skipped="0"
+    tests="3" time="6.125" timestamp="Wed, 18 Oct 2017 15:25:58 GMT">
+  
+    <testcase name="test" classname="test" time="2.744" assertions="1">
+
+    
+    </testcase>
+  
+    <testcase name="Click on Existing Employee, verify Data" classname="test" time="3.215" assertions="0">
+    </testcase>
+  
+    <testcase name="Check that Simulated Employee List Loads" classname="test" time="0.1660" assertions="1">  <failure message="Expected element &lt;li[name=employee1]&gt; text to equal: &quot;Bernice Ortize&quot; - element was not found">    at Object.listCheck (/Users/zackorton/Documents/Employee/automate-employee-manager/nightwatch/test_data/functions.js:7:18)
+    at Object.Check that Simulated Employee List Loads (/Users/zackorton/Documents/Employee/automate-employee-manager/nightwatch/tests/test.js:59:19)</failure>
+
+    
+    </testcase>
+  
+
+  
+
+  
+  </testsuite>
+</testsuites>
