@@ -30,6 +30,7 @@ const editFields = (fields, values, browser) => {
   for(let i=0; i < fields.length; i++){
     browser.clearValue(selectors[fields[i]])
     browser.getSet(selector, value)
+    
     //.expect.element(selector).to.have.value.that.equals(value)
   }
 // edits the editor fields, based on fields named in the field array, and
