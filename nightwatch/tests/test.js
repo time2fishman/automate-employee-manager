@@ -79,6 +79,7 @@ module.exports = {
             .click(selectors.infoCardItems.saveButton)
         functions.clickByName(data.employees.existingEmployeeData.employee4.name, browser)
         functions.clickByName(data.employees.existingEmployeeData.employee1.name, browser)
+<<<<<<< HEAD
         functions.editorCheck(data.employees.editedEmployeeData.employee1, browser) 
         },
         
@@ -96,6 +97,24 @@ module.exports = {
                 data.employees.existingEmployeeData.employee10.name
             ]
             functions.listCheck(employeeNames, browser)
+=======
+        functions.editorCheck(data.employees.editedEmployeeData.employee1, browser)
+    },
+    'Check that Simulated Employee List Loads': browser => {
+        let employeeNames = [
+            data.employees.existingEmployeeData.employee1.name,
+            data.employees.existingEmployeeData.employee2.name,
+            data.employees.existingEmployeeData.employee3.name,
+            data.employees.existingEmployeeData.employee4.name,
+            data.employees.existingEmployeeData.employee5.name,
+            data.employees.existingEmployeeData.employee6.name,
+            data.employees.existingEmployeeData.employee7.name,
+            data.employees.existingEmployeeData.employee8.name,
+            data.employees.existingEmployeeData.employee9.name,
+            data.employees.existingEmployeeData.employee10.name
+        ]
+        functions.listCheck(employeeNames, browser)
+>>>>>>> 5b94083c3f73beee9a58ad40b8171cc73923868a
 
         }
     }
