@@ -2,13 +2,13 @@ module.exports = {
     employees: {
         existingEmployeeData: {
             employee1: {
-                name: 'Bernice Ortize',
+                name: 'Bernice Ortiz',
                 id: '1',
                 phoneNumber: '4824931093',
                 title: 'CEO',
             },
             employee2: {
-                name: 'Marine Barnett',
+                name: 'Marnie Barnett',
                 id: '2',
                 phoneNumber: '3094812387',
                 title: 'CTO',
