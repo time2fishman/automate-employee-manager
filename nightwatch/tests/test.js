@@ -36,7 +36,7 @@ module.exports = {
             data.employees.existingEmployeeData.employee9.name,
             data.employees.existingEmployeeData.employee10.name
         ]
-        functions.listcheck(employeeNames)
+        functions.listCheck(employeeNames, browser)
 
     }
 
