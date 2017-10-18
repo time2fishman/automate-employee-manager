@@ -24,10 +24,8 @@ const clickByName = (employeeName, browser) => {
         if (object.hasOwnProperty(card)) {
             var element = object[card]
             browser.getText(element, result => {
-                if (result.value === employeeName){
+                if (result === employeeName)
                     browser.click(element)
-                        .waitForElementVisible(selectors.infoCardItems.saveButton, 1000)
-                }
             })
         }
     }
@@ -40,9 +38,15 @@ const editorCheck = (employee, browser) => {
     browser.expect.element(selectors.infoCardList.id).text.to.equal(employee.id)
     browser.expect.element(selectors.infoCardList.phoneNumberField).text.to.equal(employee.phoneNumber)
     browser.expect.element(selectors.infoCardList.titleLabel).text.to.equal(employee.title)
-}
+} 
 
 const editFields = (fields, values, browser) => {
+    for(let i=0; i < fields.length; i++) {
+        browser
+            .clearValue(selectors[fields[i]])
+            .setValue(selectors[fields[i]])
+            .expect.element(selectors[fields[i]]).text.to.equal(value[i])
+    }
     // edits the editor fields, based on fields named in the field array, and
     // inputs the values from the value array at the same index
     // e.g. ['nameField', 'titleField'], ['Ron Swanson', 'Director of Parks and Rec.']
