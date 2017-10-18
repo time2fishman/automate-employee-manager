@@ -14,5 +14,20 @@ module.exports = {
         console.log(data.foo)
         browser
             .expect.element('body').to.be.present;
-    }
+    },
+    'Click on Existing Employee, verify Data' : browser => {
+        let object = data.employees.existingEmployeeData
+        for (let employee in object) {
+            if (object.hasOwnProperty(employee)) {
+                let employeeObject = object[employee];
+
+                functions.clickByName(employeeObject.name, browser)
+                browser.pause (100)
+                functions.editorCheck(employeeObject, browser)
+
+                
+            }
+        }
+            
+    }   
 }
