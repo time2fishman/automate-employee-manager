@@ -22,6 +22,63 @@ module.exports = {
         browser.click(selectors.infoCardItems.clearButton)
         functions.editorCheck(['nameField', 'phoneField', 'titleField'], [data.employees.existingEmployeeData.employee4.name, data.employees.existingEmployeeData.employee4.phoneNumber, data.employees.existingEmployeeData.employee4.title])
     },
+
+    'Click on Existing Employee, verify Data': browser => {
+        let object = data.employees.existingEmployeeData
+        for (let employee in object) {
+            if (object.hasOwnProperty(employee)) {
+                let employeeObject = object[employee];
+
+                functions.clickByName(employeeObject.employee1, browser)
+                browser.pause(100)
+                functions.editorCheck(employeeObject, browser)
+
+                functions.clickByName(employeeObject.employee2, browser)
+                browser.pause(100)
+                functions.editorCheck(employeeObject, browser)
+
+                functions.clickByName(employeeObject.employee3, browser)
+                browser.pause(100)
+                functions.editorCheck(employeeObject, browser)
+
+                functions.clickByName(employeeObject.employee4, browser)
+                browser.pause(100)
+                functions.editorCheck(employeeObject.browser)
+
+                functions.clickByName(employeeObject.employee5, browser)
+                browser.pause(100)
+                functions.editorCheck(employeeObject, browser)
+
+                functions.clickByName(employeeObject.employee6, browser)
+                browser.pause(100)
+                functions.editorCheck(employeeObject, browser)
+
+                functions.clickByName(employeeObject.employee7, browser)
+                browser.pause(100)
+                functions.editorCheck(employeeObject, browser)
+
+                functions.clickByName(employeeObject.employee8, browser)
+                browser.pause(100)
+                functions.editorCheck(employeeObject, browser)
+
+                functions.clickByName(employeeObject.employee9, browser)
+                browser.pause(100)
+                functions.editorCheck(employeeObject, browser)
+
+                functions.clickByName(employeeObject.employee10, browser)
+                browser.pause(100)
+                functions.editorCheck(employeeObject, browser)
+
+
+
+
+
+
+            }
+        }
+
+    },
+
     'Edit & Save Employee, Verify Persistence': browser => {
         functions.clickByName(data.employees.existingEmployeeData.employee1.name, browser)
         functions.editFields(['nameField', 'phoneField', 'titleField'], [data.employees.editedEmployeeData.employee1.name, data.employees.editedEmployeeData.employee1.phoneNumber, data.employees.editedEmployeeData.employee1.title], browser)
@@ -31,6 +88,7 @@ module.exports = {
         functions.clickByName(data.employees.existingEmployeeData.employee1.name, browser)
         functions.editorCheck(data.employees.editedEmployeeData.employee1, browser)
     },
+
     'Check that Simulated Employee List Loads': browser => {
         let employeeNames = [
             data.employees.existingEmployeeData.employee1.name,
@@ -47,3 +105,4 @@ module.exports = {
         functions.listCheck(employeeNames, browser)
     }
 }
+
