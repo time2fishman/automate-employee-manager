@@ -1,6 +1,11 @@
 const selectors = require('./selectors')
 
 const listCheck = (employeeNames, browser) => {
+<<<<<<< HEAD
+    // checks a list of employeeNames against the names on the screen.
+    // e.g. ['Ron Swanson', 'Todd Bergeron',...]
+    // should check browser for each name in the right position
+=======
 // checks a list of employeeNames against the names on the screen.
 // e.g. ['Ron Swanson', 'Todd Bergeron',...]
 // should check browser for each name in the right position
@@ -14,28 +19,47 @@ const listCheck = (employeeNames, browser) => {
   browser.expect.element(selectors.employeeList.employee8).text.to.equal(employeeNames[7])
   browser.expect.element(selectors.employeeList.employee9).text.to.equal(employeeNames[8])
   browser.expect.element(selectors.employeeList.employee10).text.to.equal(employeeNames[9])
+>>>>>>> c25155ec18d484af8a05169cba749beaf6617fcb
 }
 
 const clickByName = (employeeName, browser) => {
-// clicks the employee tag in the employee list for the name passed in
-// this will populate the editor
-}
+    // clicks the employee tag in the employee list for the name passed in
+    // this will populate the editor
+    let object = selectors.employeeList
+    for (var card in object) {
+        if (object.hasOwnProperty(card)) {
+            var element = object[card]
+            browser.getText(element, result => {
+                if(result===employeeName)
+                    browser.click(element)
+            })
+        }
+    }
 
-const editorCheck = (employee, browser) => {
-// takes the passed in employee object and compares against what is in
-// the fields
-}
+    const editorCheck = (employee, browser) => {
+        // takes the passed in employee object and compares against what is in
+        // the fields
+    }
 
-const editFields = (fields, values, browser) => {
-// edits the editor fields, based on fields named in the field array, and
-// inputs the values from the value array at the same index
-// e.g. ['nameField', 'titleField'], ['Ron Swanson', 'Director of Parks and Rec.']
-//      would put Ron Swanson in the name field, Director... in the title field
-}
+    const editFields = (fields, values, browser) => {
+        // edits the editor fields, based on fields named in the field array, and
+        // inputs the values from the value array at the same index
+        // e.g. ['nameField', 'titleField'], ['Ron Swanson', 'Director of Parks and Rec.']
+        //      would put Ron Swanson in the name field, Director... in the title field
+    }
 
+<<<<<<< HEAD
+    module.exports = {
+        listCheck: listCheck,
+        clickByName: clickByName,
+        editFields: editFields,
+        editorCheck: editorCheck
+    }
+=======
 module.exports = {
     listCheck: listCheck,
     clickByName: clickByName,
     editFields: editFields,
     editorCheck: editorCheck
 }
+>>>>>>> c25155ec18d484af8a05169cba749beaf6617fcb
