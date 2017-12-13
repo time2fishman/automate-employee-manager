@@ -5,9 +5,65 @@
 
   <testsuite name="goodTests"
     errors="0" failures="0" hostname="" id="" package="goodTests" skipped="0"
-    tests="2" time="9.273" timestamp="Wed, 13 Dec 2017 22:42:21 GMT">
+    tests="2" time="9.854" timestamp="Wed, 13 Dec 2017 22:54:01 GMT">
   
-    <testcase name="Check edit and save functionality" classname="goodTests" time="7.053" assertions="199">
+    <testcase name="Check edit and save functionality" classname="goodTests" time="7.478" assertions="227">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
 
     
 
@@ -408,7 +464,31 @@
     
     </testcase>
   
-    <testcase name="Check edit and cancel functionality" classname="goodTests" time="2.220" assertions="99">
+    <testcase name="Check edit and cancel functionality" classname="goodTests" time="2.376" assertions="111">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
 
     
 

@@ -88,6 +88,8 @@ module.exports = {
             .verify.value(selectors.phoneField, employee.phone)
             .verify.containsText(selectors.titleLabel, globalData.titleLabel)
             .verify.value(selectors.titleField, employee.title)
+        browser.expect.element(selectors.saveButton).to.have.attribute('disabled')
+        browser.expect.element(selectors.cancelButton).to.have.attribute('disabled')
     },
     /**
      * checkEmployee verifies that the current screen reflects the entered employee
