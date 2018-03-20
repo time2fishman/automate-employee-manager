@@ -21,11 +21,11 @@ module.exports = {
         nameTitle: 'p[name="employeeName"]',
         saveBtn: 'button[name="save"]',
         cancelBtn: 'button[name="cancel"]',
-        nameLabel: 'span[name="nameLabel"]',
+        nameLabel: '//*[@id="app"]/div[2]/div[2]/div[1]/div/span[2]',
         nameInput: 'input[name="nameEntry"]',
-        phoneLabel: 'span[name="phoneLabel"]',
+        phoneLabel: '//*[@id="app"]/div[2]/div[2]/div[1]/div/span[3]',
         phoneInput: 'input[name="phoneEntry"]',
-        titleLabel: 'span[name="titleLabel"]',
+        titleLabel: '//*[@id="app"]/div[2]/div[2]/div[1]/div/span[4]',
         titleInput: 'input[name="titleEntry"]'
     }
 }

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites errors="1"
             failures="0"
-            tests="1">
+            tests="4">
 
   <testsuite name="tests"
-    errors="1" failures="0" hostname="" id="" package="tests" skipped="0"
-    tests="1" time="0.01800" timestamp="Tue, 19 Dec 2017 23:57:58 GMT">
+    errors="1" failures="0" hostname="" id="" package="tests" skipped="3"
+    tests="4" time="0.01200" timestamp="Tue, 20 Mar 2018 20:59:47 GMT">
   
-    <testcase name="Does the correct info display upon loading the page" classname="tests" time="0.01800" assertions="0">
+    <testcase name="Does the correct info display upon loading the page" classname="tests" time="0.01200" assertions="0">
     </testcase>
   
 
@@ -15,9 +15,9 @@
     <system-err>
         Error while running [Tests / Does the correct info display upon loading the page]:
 
-  ReferenceError: employee is not defined
-    at Object.uiLoadCheck (/Users/AdamandStacyMartinez/Documents/DevMtn/Projects/automate-employee-manager/nightwatch/test_data/functions.js:15:36)
-    at Object.Does the correct info display upon loading the page (/Users/AdamandStacyMartinez/Documents/DevMtn/Projects/automate-employee-manager/nightwatch/testing/tests.js:17:19)
+  ReferenceError: key is not defined
+    at Object.uiLoadCheck (/Users/AdamandStacyMartinez/Documents/DevMtn/Projects/automate-employee-manager/nightwatch/test_data/functions.js:17:59)
+    at Object.Does the correct info display upon loading the page (/Users/AdamandStacyMartinez/Documents/DevMtn/Projects/automate-employee-manager/nightwatch/testing/tests.js:16:19)
     at Module.call (/usr/local/lib/node_modules/nightwatch/lib/runner/module.js:62:34)
     at /usr/local/lib/node_modules/nightwatch/lib/runner/testcase.js:70:29
     at _fulfilled (/usr/local/lib/node_modules/nightwatch/node_modules/q/q.js:834:54)
@@ -29,6 +29,23 @@
     </system-err>
   
 
+  
+    
+    <testcase
+      name="After clicking on an employee, does all the correct info display in the details card" classname="tests">
+      <skipped />
+    </testcase>
+    
+    <testcase
+      name="Can I successfully edit an employee's information, save it, and have the change(s) persist" classname="tests">
+      <skipped />
+    </testcase>
+    
+    <testcase
+      name="Can I successfully edit an employee's information, cancel it, and have the change(s) revert" classname="tests">
+      <skipped />
+    </testcase>
+    
   
   </testsuite>
 </testsuites>
